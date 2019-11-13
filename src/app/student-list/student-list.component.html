@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div>
+    <h1>Student List Page</h1>
+    <button type="submit" style="float:right;" class="btn btn-primary" (click)="addStudent()">Add Student</button>
+  </div>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">S.no.</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Student Batch</th>
+        <th scope="col">Student Course</th>
+        <th scope="col">Student Adress</th>
+        <th scope="col">View Student</th>
+        <th scope="col">Update Student</th>
+        <th scope="col">Delete Student</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studentList;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{student.student_name}}</td>
+        <td>{{student.student_batch}}</td>
+        <td>{{student.student_course}}</td>
+        <td>{{student.student_adress}}</td>
+        <td style="text-align: center"><button type="submit" style="width: 100px;" class="btn btn-primary" (click)="viewStudent(student)">View</button></td>
+        <td style="text-align: center"><button type="submit" class="btn btn-success" (click)="updateStudent(student)">Update</button></td>
+        <td style="text-align: center"><button type="submit" style="width: 100px;" class="btn btn-danger" (click)="deleteStudent()">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

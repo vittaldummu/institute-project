@@ -1,0 +1,26 @@
+<div class="container">
+
+    <form>
+      <div class="form-group">
+        <label for="instituteName">institute Name</label>
+        <input type="text" class="form-control" id="instituteName" name="instituteName"  [(ngModel)] = "formData.instituteName"  placeholder="institute Name">
+      </div>
+      <div class="form-group">
+        <label for="instituteBatch">Institute Batch</label>
+        <input type="text" class="form-control" id="instituteBatch" name="instituteBatch" [(ngModel)] = "formData.instituteBatch"  placeholder="institute Batch">
+      </div>
+      <div class="form-group">
+        <label for="instituteCourse">Institute Course</label>
+        <input type="text" class="form-control" id="instituteCourse" name="instituteCourse" [(ngModel)] = "formData.instituteCourse"  placeholder="institute Course">
+      </div>
+      <div class="form-group">
+        <label for="instituteAdress">Institue Adress</label>
+        <input type="text" class="form-control" id="instituteAdress" name="instituteAdress" [(ngModel)] = "formData.instituteAdress"  placeholder="institute Adress">
+      </div>
+  
+      <button type="submit" class="btn btn-primary" (click)="addInstitute()">Add Institute</button>
+    </form>
+  
+  </div>
+  <router-outlet></router-outlet>
+  
